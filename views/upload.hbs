@@ -1,0 +1,41 @@
+<div class="container w-50">
+    {{!-- EXERCISE 4 - LIMITS FILE SIZE --}}
+    <form action="/upload_one" method="post" enctype="multipart/form-data">
+        <div class="row p-5 m-5 shadow">
+            <h2 class="text-danger">BÀI 4</h2>
+
+            <div class="col-8">
+                <input type="file" name="avatar" class="form-control">
+            </div>
+            <div class="col-4">
+                <button type="submit" class="btn btn-primary form-control">Upload one File</button>
+            </div>
+
+            {{#if notify}}
+            <p class="text-end text-info mt-3 mb-0">{{notify}}</p>
+            {{else}}
+            {{/if}}
+        </div>
+    </form>
+
+    {{!-- EXERCISE 5 - UPLOAD MANY FILES --}}
+    <form action="/upload_many" method="post" enctype="multipart/form-data">
+        <div class="row p-5 m-5 shadow">
+            <h2 class="text-danger">BÀI 5</h2>
+
+            <div class="col-8">
+                <input type="file" name="avatars" class="form-control" multiple="multiple" accept="image/*">
+            </div>
+            <div class="col-4">
+                <button type="submit" class="btn btn-primary form-control">Upload many Files</button>
+            </div>
+
+            {{#if notifies}}
+            <p class="text-end text-info mt-3 mb-0">{{notifies}}</p>
+            {{else}}
+            {{/if}}
+        </div>
+    </form>
+
+
+</div>
